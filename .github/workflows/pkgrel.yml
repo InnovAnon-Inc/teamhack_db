@@ -60,7 +60,7 @@ jobs:
     - name: Test Deps
       run: |
         #pip install '.[test]'
-        pip install coverage pytest
+        pip install coverage dnslib pytest
 
     - name: DB
       run: |
