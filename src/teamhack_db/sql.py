@@ -1,4 +1,5 @@
 #from psycopg2 import connect
+from dnslib import QTYPE
 
 def get_name(name):
   if not name.endswith('.'): name = '{name}.'
