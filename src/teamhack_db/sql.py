@@ -6,9 +6,9 @@ def get_name(name):
   return name
 
 def get_record_type(record_type):
-  if   record_type == 'A':  rt = QTYPE.A
-  elif record_type == 'NS': rt = QTYPE.NS
-  elif record_type == 'MX': rt = QTYPE.MX
+  if   record_type == 'A':  return QTYPE.A
+  elif record_type == 'NS': return QTYPE.NS
+  elif record_type == 'MX': return QTYPE.MX
   return None
 
 def drop_type_record(conn): # TODO delete this
