@@ -53,6 +53,9 @@ def drop_row_id(conn, row_id):
 def drop_row_hostname(conn, hostname):
     with conn.cursor() as curs:
         curs.execute("""DELETE FROM hosts WHERE hostname = %s""", (hostname,))
+def drop_row_hostname_recordtype(conn, hostname, record):
+    with conn.cursor() as curs:
+        curs.execute("""DELETE FROM hosts WHERE hostname = %s AND record = %s""", (hostname,))
 def drop_row_ip(conn, ip):
     with conn.cursor() as curs:
         curs.execute("""DELETE FROM hosts WHERE ip = %s""", (ip,))
