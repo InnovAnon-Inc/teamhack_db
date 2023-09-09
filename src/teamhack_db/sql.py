@@ -2,7 +2,7 @@
 from dnslib import QTYPE
 
 def get_name(name):
-  if not name.endswith('.'): name = '{name}.'
+  if not name.endswith('.'): name = f'{name}.'
   return name
 
 def get_record_type(record_type):
