@@ -1,17 +1,7 @@
 from dnslib          import *
 from psycopg2 import connect
 
-from .sql     import create_table, insert, select_hostname_recordtype
-
-def get_name(name):
-  if not name.endswith('.'): name = '{name}.'
-  return name
-
-def get_record_type(record_type):
-  if   record_type == 'A':  rt = QTYPE.A
-  elif record_type == 'NS': rt = QTYPE.NS
-  elif record_type == 'MX': rt = QTYPE.MX
-  return None
+from .sql     import create_table, insert, select_hostname_recordtype, get_name, get_record_type
 
 def start_cli(conn):
   while True: # User interface to add and lookup DNS records
@@ -23,7 +13,7 @@ def start_cli(conn):
         name        = input('Enter the name of the DNS record: \n ')
         name        = get_name(name)
         record_type = input('Enter the type of the DNS record (A, AAAA, MX, etc.): \n')
-        rt =        = get_record_type(record_type)
+        rt          = get_record_type(record_type)
         if rt is None:
           print(f'invalid record type: {record_type}\n')
           continue

@@ -1,5 +1,15 @@
 #from psycopg2 import connect
 
+def get_name(name):
+  if not name.endswith('.'): name = '{name}.'
+  return name
+
+def get_record_type(record_type):
+  if   record_type == 'A':  rt = QTYPE.A
+  elif record_type == 'NS': rt = QTYPE.NS
+  elif record_type == 'MX': rt = QTYPE.MX
+  return None
+
 def drop_type_record(conn): # TODO delete this
     with conn.cursor() as curs:
         curs.execute("""DROP TYPE IF EXISTS record_type""")
