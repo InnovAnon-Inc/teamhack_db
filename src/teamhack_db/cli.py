@@ -1,7 +1,8 @@
 from dnslib          import *
 from psycopg2 import connect
 
-from .sql     import create_table, insert, select_hostname_recordtype, get_name, get_record_type
+from .sql     import create_table, insert, select_hostname_recordtype
+from .util    import get_name, get_record_type
 
 def start_cli(conn):
   while True: # User interface to add and lookup DNS records
