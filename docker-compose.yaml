@@ -1,8 +1,8 @@
 version: '3.8'
 services:
   teamhack_db:
-    image: innovanon/teamhack-db
-    container_name:  teamhack-db
+    image: innovanon/teamhack_db
+    container_name:  teamhack_db
     volumes:
       - syslog-client:/etc/rsyslog.d:ro
     restart:         always
