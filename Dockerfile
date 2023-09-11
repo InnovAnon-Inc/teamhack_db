@@ -12,6 +12,6 @@ RUN pip install teamhack_db
 ENTRYPOINT [         \
   "/usr/bin/python", \
   "-m",              \
-  "teamhack_db",     \
+  "teamhack_db"      \
 ]
 
