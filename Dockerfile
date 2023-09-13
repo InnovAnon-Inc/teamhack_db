@@ -10,7 +10,8 @@ FROM python:latest
 RUN pip install teamhack_db
 
 ENTRYPOINT [         \
-  "/usr/bin/python", \
+  "/usr/bin/env",    \
+  "python",          \
   "-m",              \
   "teamhack_db"      \
 ]
