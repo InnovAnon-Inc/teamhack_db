@@ -9,6 +9,8 @@ FROM python:latest
 #  /tmp/dist/
 RUN pip install teamhack_db
 
+WORKDIR  /var/teamhack
+VOLUME ["/var/teamhack/etc"]
 ENTRYPOINT [         \
   "/usr/bin/env",    \
   "python",          \

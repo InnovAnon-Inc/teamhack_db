@@ -5,6 +5,7 @@ services:
     container_name:  teamhack_db
     volumes:
       - syslog-client:/etc/rsyslog.d:ro
+      - teamhack:/var/teamhack/etc:ro
     restart:         always
     #network_mode:    service:vpn-s1
     #healthcheck:
