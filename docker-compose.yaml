@@ -17,12 +17,12 @@ services:
     depends_on:
       #postgres:
       #  condition: service_healthy
-      #syslog:
-      #  condition: service_started
+      syslog:
+        condition: service_started
       ##  condition:   service_healthy
       #  #condition:   service_healthy
-      teamhack_dns:
-        condition: service_healthy
+      #teamhack_dns:
+      #  condition: service_healthy
     #networks:
     #  network:
     #    ipv4_address: 10.5.0.5
