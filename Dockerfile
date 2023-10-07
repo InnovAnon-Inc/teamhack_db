@@ -11,6 +11,7 @@ RUN pip install teamhack_db
 
 WORKDIR  /var/teamhack
 VOLUME ["/var/teamhack/etc"]
+RUN test -x /usr/bin/env
 ENTRYPOINT [         \
   "/usr/bin/env",    \
   "python",          \
