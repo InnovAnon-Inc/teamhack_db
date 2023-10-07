@@ -1,4 +1,4 @@
-name: Hack the Box Team Support Services
+name: CLI for DB used by PG-backed DNS-Server
 permissions:
   contents: write
 
